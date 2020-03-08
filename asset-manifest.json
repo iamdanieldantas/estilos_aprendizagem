@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/ddvieira/estilos_aprendizagem.git/static/css/main.16837024.chunk.css",
-    "main.js": "/ddvieira/estilos_aprendizagem.git/static/js/main.9c05cb51.chunk.js",
-    "main.js.map": "/ddvieira/estilos_aprendizagem.git/static/js/main.9c05cb51.chunk.js.map",
+    "main.css": "/ddvieira/estilos_aprendizagem.git/static/css/main.a6893d88.chunk.css",
+    "main.js": "/ddvieira/estilos_aprendizagem.git/static/js/main.4048e010.chunk.js",
+    "main.js.map": "/ddvieira/estilos_aprendizagem.git/static/js/main.4048e010.chunk.js.map",
     "runtime-main.js": "/ddvieira/estilos_aprendizagem.git/static/js/runtime-main.5915c70c.js",
     "runtime-main.js.map": "/ddvieira/estilos_aprendizagem.git/static/js/runtime-main.5915c70c.js.map",
-    "static/js/2.f47d94e6.chunk.js": "/ddvieira/estilos_aprendizagem.git/static/js/2.f47d94e6.chunk.js",
-    "static/js/2.f47d94e6.chunk.js.map": "/ddvieira/estilos_aprendizagem.git/static/js/2.f47d94e6.chunk.js.map",
+    "static/js/2.6bf5438b.chunk.js": "/ddvieira/estilos_aprendizagem.git/static/js/2.6bf5438b.chunk.js",
+    "static/js/2.6bf5438b.chunk.js.map": "/ddvieira/estilos_aprendizagem.git/static/js/2.6bf5438b.chunk.js.map",
     "index.html": "/ddvieira/estilos_aprendizagem.git/index.html",
-    "precache-manifest.1e738f93e3fec146498eab9ae0c350db.js": "/ddvieira/estilos_aprendizagem.git/precache-manifest.1e738f93e3fec146498eab9ae0c350db.js",
+    "precache-manifest.937394aa397ef5de882721822caccd34.js": "/ddvieira/estilos_aprendizagem.git/precache-manifest.937394aa397ef5de882721822caccd34.js",
     "service-worker.js": "/ddvieira/estilos_aprendizagem.git/service-worker.js",
-    "static/css/main.16837024.chunk.css.map": "/ddvieira/estilos_aprendizagem.git/static/css/main.16837024.chunk.css.map",
-    "static/js/2.f47d94e6.chunk.js.LICENSE.txt": "/ddvieira/estilos_aprendizagem.git/static/js/2.f47d94e6.chunk.js.LICENSE.txt"
+    "static/css/main.a6893d88.chunk.css.map": "/ddvieira/estilos_aprendizagem.git/static/css/main.a6893d88.chunk.css.map",
+    "static/js/2.6bf5438b.chunk.js.LICENSE.txt": "/ddvieira/estilos_aprendizagem.git/static/js/2.6bf5438b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5915c70c.js",
-    "static/js/2.f47d94e6.chunk.js",
-    "static/css/main.16837024.chunk.css",
-    "static/js/main.9c05cb51.chunk.js"
+    "static/js/2.6bf5438b.chunk.js",
+    "static/css/main.a6893d88.chunk.css",
+    "static/js/main.4048e010.chunk.js"
   ]
 }
