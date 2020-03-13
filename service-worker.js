@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ddvieira/estilos_aprendizagem.git/precache-manifest.937394aa397ef5de882721822caccd34.js"
+  "/ddvieira/estilos_aprendizagem.git/precache-manifest.66975cb27d771005545d41704366fbc2.js"
 );
 
 self.addEventListener('message', (event) => {
