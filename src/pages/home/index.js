@@ -1,23 +1,27 @@
 import React, { Component } from 'react';
-// import LikertScale from 'likert-react';
 
 export default class Home extends Component {
 
     render() {
-        // const onClick = (q, n) => console.info('question: ' + q + ' answer: ' + n);
-        // const reviews = [
-        //     { question: 'Code is readable' },
-        //     { question: 'Tests are comprehensive' },
-        //     { question: 'Webpack is configured well' }
-        //   ];
 
         return(
-        // <LikertScale
-        //     reviews={reviews}
-        //     onClick={onClick}
-        //     full-line
-        // />
-        <div></div>
+        <div>
+            <header>O que é Tecnologia da Informação?</header>
+            <article>
+                <h2>Introdução</h2>
+
+                <p>
+                Em seus primórdios, os computadores não passavam de "máquinas gigantes" 
+                que agilizavam tarefas lógicas em instituições de pesquisa, grandes empresas
+                 e entidades governamentais. Mas, com o avanço tecnológico, essas máquinas 
+                 ficaram não só mais compactas, como também se tornaram mais confiáveis e 
+                 potentes. De tão expressiva, a evolução computacional nos levou a um 
+                 conceito que está presente em todas as áreas do conhecimento: a 
+                 <span>Tecnologia da Informação (TI).</span>
+                </p>
+            </article>
+
+        </div>
         )
     }
 }
