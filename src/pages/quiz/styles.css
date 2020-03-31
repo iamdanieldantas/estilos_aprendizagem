@@ -1,71 +1,51 @@
-.questions-list {
+html, body {
+  padding:0;
+  margin:0;
+}
+
+.quiz-container {
     max-width: 700px;
     margin: 20px auto 0;
     padding: 0 20px;
 }
 
-.questions-list article {
-    background:  #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
+.quiz-container table tr td {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  display: grid;
+  grid-gap: 24px;
 }
 
-.questions-list article p {
-    font-size: 16px;
-    color: #999;
-    margin-top: 5px;
-    line-height: 24px;
+.quiz-container table tr td strong {
+  display: block;
+  color: #41414d;
+  font-size: 16px;
 }
 
-.questions-list article a{
-    height: 42px;
-    border-radius: 5px;
-    border: 2px solid #da552f;
-    background: none;
-    margin-top: 10px;
-    color: #da552f;
-    font-weight: bold;
-    font-size: 16px;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s;
+.quiz-container ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 24px;
+  list-style: none;
 }
 
-.questions-list article a:hover {
-    background: #da552f;
-    color: #fff;
-}
-
-.questions-list .actions a{
-    height: 42px;
-    border-radius: 5px;
-    border: 2px solid #da552f;
-    background: none;
-    margin-top: 10px;
-    color: #da552f;
-    font-weight: bold;
-    font-size: 16px;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s;
-
+.quiz-container ul li {
+  padding: 16px;
+  position: relative;
 }
 
 /* LIKET SCALE CSS */
-html,body {padding:0;margin:0;}
 .wrap {
   font:12px Arial, san-serif;
 }
+
 h1.likert-header {
   padding-left:4.25%;
   margin:20px 0 0;
 }
+
 form .statement {
   display:block;
   font-size: 14px;
@@ -73,6 +53,7 @@ form .statement {
   padding: 30px 0 0 4.25%;
   margin-bottom:10px;
 }
+
 form .likert {
   list-style:none;
   width:100%;
@@ -98,6 +79,7 @@ form .likert li {
   text-align:center;
   vertical-align: top;
 }
+
 form .likert li input[type=radio] {
   display:block;
   position:relative;
@@ -106,6 +88,7 @@ form .likert li input[type=radio] {
   margin-left:-6px;
   
 }
+
 form .likert li label {width:100%;}
 form .buttons {
   margin:30px 0;
@@ -123,6 +106,8 @@ form .buttons .submit {background-color: #67ab49;}
 form .buttons .clear:hover {background-color: #ccc;}
 form .buttons .submit:hover {background-color: #14892c;} 
 
-.MuiSvgIcon-root:hover {
-  cursor: pointer;
+form .likert:nth-child(4n) {
+  background-color: black;
 }
+
+
