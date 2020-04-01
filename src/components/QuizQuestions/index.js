@@ -17,5 +17,4 @@ const QuizQuestions = ({ indexQuestion, txtQuestion, audioFile, saveAnswer }) =>
   </>
 
 };
-
 export default QuizQuestions

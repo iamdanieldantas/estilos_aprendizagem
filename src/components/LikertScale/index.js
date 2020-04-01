@@ -20,6 +20,7 @@ const LikertScale = ({ idNumber, saveAnswer, play }) => {
   return (
       <div className="wrap">
           <VolumeUp onClick={() => play()} className='volume'/>
+
           <form action="">
               <ul className='likert' id={`${idNumber}`}>
                 {likertScaleItems.map(
@@ -30,5 +31,5 @@ const LikertScale = ({ idNumber, saveAnswer, play }) => {
       </div>
   )
 }
-
 export default LikertScale
+

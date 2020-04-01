@@ -89,8 +89,9 @@ const Main = () => {
             </div>
 
             <button className="button" onClick={checkAnswer}>Enviar</button>
+
         </div >
     );
 }
-
 export default Main
+
