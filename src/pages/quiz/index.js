@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Header from '../../components/Header';
+// import Header from '../../components/Header';
 import FontSizeChanger from 'react-font-size-changer'
 import QuizQuestions from '../../components/QuizQuestions'
 
@@ -8,7 +8,7 @@ import './styles.css';
 
 const Main = () => {
     const [answers, setAnswers] = useState(Array(questions.length).fill(null));
-    const header = "Questionário de Estilo de Aprendizagem";
+    // const header = "Questionário de Estilo de Aprendizagem";
     console.log(answers)
 
     const saveAnswer = (idQuestion, idAnswer) => {
@@ -48,16 +48,16 @@ const Main = () => {
 
     return (
         <div className='quiz-container' >
-            <Header header={header} />
+            {/* <Header header={header} /> */}
             <FontSizeChanger className="expand-button"
-                targets={['#form_quiz .content']}
+                targets={['.target-font-size .content']}
                 onChange={(element, newValue, oldValue) => {
                     console.log(element, newValue, oldValue);
                 }}
 
                 options={{
-                    stepSize: 2,
-                    range: 2
+                    stepSize: 1,
+                    range: 3
                 }}
                 customButtons={{
                     up: <span style={{ 'fontSize': '36px' }}>A</span>,
@@ -73,23 +73,25 @@ const Main = () => {
                     buttonsMargin: 10
                 }}
             />
-            <div id="form_quiz">
+            
+            <div className="form_quiz">
                 <p className="title">Responda o questionário abaixo:</p>
                 <table className="content">
                     <tbody>
-                    {questions.map((question, index) =>
-                        <QuizQuestions
-                            {...question}
-                            key={`quiz-question-${index}`}
-                            indexQuestion={index + 1}
-                            saveAnswer={saveAnswer} />
-                    )}
+                        {questions.map((question, index) =>
+                            <QuizQuestions
+                                {...question}
+                                key={`quiz-question-${index}`}
+                                indexQuestion={index + 1}
+                                saveAnswer={saveAnswer} />
+                        )}
                     </tbody>
                 </table>
             </div>
 
-            <button className="button" onClick={checkAnswer}>Enviar</button>
-
+            <div className="text-center">
+                <button type="button" className="button" onClick={checkAnswer}>Enviar</button>
+            </div>
         </div >
     );
 }

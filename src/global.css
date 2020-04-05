@@ -13,8 +13,11 @@ body {
 
     /* melhorar font no google chrome */
     -webkit-font-smoothing: antialiased;
-
 }
+
+html {
+    scroll-behavior: smooth;
+  }
 
 input, button, textarea {
     font: 400 18px Roboto, sans-serif;

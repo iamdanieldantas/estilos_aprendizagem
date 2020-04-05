@@ -4,7 +4,6 @@ import Routes from './routes';
 
 import './global.css';
 
-
 const App = () => (
   <div className = 'App'>
     <Header />
