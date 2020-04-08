@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-// import Header from '../../components/Header';
-import FontSizeChanger from 'react-font-size-changer'
-import QuizQuestions from '../../components/QuizQuestions'
+import FontSizeChange from '../../components/FontSizeChange';
+import QuizQuestions from '../../components/QuizQuestions';
+import Header from '../../components/Header';
 
-import { questions } from './questions'
+
+import { questions } from './questions';
 import './styles.css';
 
 const Main = () => {
     const [answers, setAnswers] = useState(Array(questions.length).fill(null));
-    // const header = "Questionário de Estilo de Aprendizagem";
-    console.log(answers)
 
     const saveAnswer = (idQuestion, idAnswer) => {
         setAnswers(prevAnswer => prevAnswer.map(
@@ -48,35 +47,12 @@ const Main = () => {
 
     return (
         <div className='quiz-container' >
-            {/* <Header header={header} /> */}
-            <FontSizeChanger className="expand-button"
-                targets={['.target-font-size .content']}
-                onChange={(element, newValue, oldValue) => {
-                    console.log(element, newValue, oldValue);
-                }}
-
-                options={{
-                    stepSize: 1,
-                    range: 3
-                }}
-                customButtons={{
-                    up: <span style={{ 'fontSize': '36px' }}>A</span>,
-                    down: <span style={{ 'fontSize': '20px' }}>A</span>,
-                    style: {
-                        backgroundColor: '#4682b4',
-                        color: 'white',
-                        WebkitBoxSizing: 'border-box',
-                        WebkitBorderRadius: '5px',
-                        width: '60px',
-                        cursor: 'pointer',
-                    },
-                    buttonsMargin: 10
-                }}
-            />
+            <Header/>
+            <FontSizeChange/>
             
             <div className="form_quiz">
                 <p className="title">Responda o questionário abaixo:</p>
-                <table className="content">
+                <table className="container">
                     <tbody>
                         {questions.map((question, index) =>
                             <QuizQuestions

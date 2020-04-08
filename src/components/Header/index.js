@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import './styles.css';
 
 const Header = () => (
@@ -9,7 +11,7 @@ const Header = () => (
 				<span className="heading-primary-main">Evoluindo o seu aprendizado</span>
 				<span className="heading-primary-sub">Faça o teste para começar</span>
 			</h1>
-			<a href="/home" className="btn btn-white btn-animated">COMEÇAR AGORA</a>
+			<Link to="/home" className="btn btn-white btn-animated">COMEÇAR AGORA</Link>
 		</div>
 	</header>
 );
