@@ -7,8 +7,8 @@ const QuizQuestions = ({ indexQuestion, txtQuestion, audioFile, saveAnswer }) =>
   return <>
     <tr>
       <td>
-        <div className="target-font-size">
-          <strong className="container">{`${indexQuestion}: ${txtQuestion}`}</strong>
+        <div id="target-font-size">
+          <strong className="content">{`${indexQuestion}: ${txtQuestion}`}</strong>
         </div>
         <LikertScale
           idNumber={indexQuestion}
