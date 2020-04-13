@@ -1,9 +1,21 @@
 import React from 'react';
 import FontSizeChange from '../../components/FontSizeChange';
+import VolumeUp from '@material-ui/icons/VolumeUp';
+
 import './style.css';
+
+import midia_1 from '../../assets/audios/Conhecimentos Básicos de Computação e Microinformática.mp3';
+import midia_2 from '../../assets/audios/ARQUITETURA SIMPLIFICADA DE UM COMPUTADOR.mp3';
+import midia_3 from '../../assets/audios/COMPONENTES BÁSICOS DE UM COMPUTADOR.mp3';
+import midia_4 from '../../assets/audios/FUNÇÕES DOS COMPONENTES BÁSICOS.mp3';
+import midia_5 from '../../assets/audios/UNIDADE CENTRAL DE PROCESSAMENTO.mp3';
+import midia_6 from '../../assets/audios/MEMÓRIA.mp3';
+import midia_7 from '../../assets/audios/RAM (RANDOM ACCESS MEMORY).mp3';
+import midia_8 from '../../assets/audios/ROM(READY ONLY MEMORY).mp3';
 
 export default function Home() {
     const result_quiz = localStorage.getItem('deficiencia');
+    const audio = new Audio(midia_1);
     alert("result: " + result_quiz);
 
     const gabarito = {
@@ -31,6 +43,10 @@ export default function Home() {
             gabarito.exibir = 1
         ));
 
+    const play = (midia) => {        
+        audio.play(midia);
+    }
+
     return (
         <div className="conteudo-container">
             <div className="container" id="target-font-size">
@@ -43,6 +59,7 @@ export default function Home() {
                 <div className="article-conteudo content" >
                     {gabarito[0].exibir ?
                         <article>
+                            <VolumeUp onClick={() => play(midia_1)} className='volume'/>
                             <h2>Conhecimentos Básicos de Computação e Microinformática</h2>
                             <p>Este tutorial trará uma série de tópicos sobre noções básicas de informática,
                                bem como uma série de conceitos sobre o mundo tecnológico. Nestas séries serão 
