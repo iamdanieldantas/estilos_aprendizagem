@@ -135,7 +135,7 @@ export default function Home() {
                             <br></br>
 
                             <div class="imagem">
-                            <img src={img1} alt="descrição"></img>
+                            <img src={img1} alt="Primeira imgaem, computador"></img>
                             </div>
                             <br></br>
 
@@ -181,7 +181,7 @@ export default function Home() {
                             </h2>
 
                             <div class="imagem">
-                            <img src={img2} alt="descrição"></img>
+                            <img src={img2} alt="Segunda imagem, diagrama"></img>
                             </div>
                             <br></br>
                         </article> : <></>}
