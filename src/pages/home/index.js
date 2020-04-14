@@ -85,11 +85,13 @@ export default function Home() {
 
                 <div className="article-conteudo content" >
                     
-
+                    <br></br>
                     <FontSizeChange />
+                    <br></br>
 
                     {gabarito[0].exibir ?
                         <article>
+                            
                             <iframe width="700" height="315" src="https://www.youtube.com/embed/iTaAGSMl2zw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                             <p>Este tutorial trará uma série de tópicos sobre noções básicas de informática,
@@ -210,9 +212,9 @@ export default function Home() {
                             <p>A Unidade Central de Processamento ou CPU contém os seguintes componentes:</p>
                             <br></br>
 
-                            <li>- a unidade de controle;</li>
-                            <li>- a unidade aritmética e lógica;</li>
-                            <li>- a memória interna ou principal do computador.</li>
+                            <li>a unidade de controle;</li>
+                            <li>a unidade aritmética e lógica;</li>
+                            <li>a memória interna ou principal do computador.</li>
                             <br></br>
 
                             <p>A CPU é o “cérebro”, ou o centro nervoso do computador, porque controla gerencialmente todas as suas operações, através da unidade de aritmética e lógica, e armazena os dados e instruções na memória interna.</p>
@@ -303,13 +305,13 @@ export default function Home() {
                             <p>Existem algumas variações e evoluções deste tipo de memória:</p>
                             <br></br>
 
-                            <p><strong>PROM:</strong>É a ROM que pode ser programada uma única vez.</p>
+                            <p><strong>PROM: </strong> É a ROM que pode ser programada uma única vez.</p>
                             <br></br>
 
-                            <p><strong>EPROM:</strong>É a ROM que pode ser apagada com o uso da luz ultravioleta(podendo ser reprogramada)</p>
+                            <p><strong>EPROM: </strong> É a ROM que pode ser apagada com o uso da luz ultravioleta(podendo ser reprogramada)</p>
                             <br></br>
 
-                            <p><strong>EEPROM:</strong>É a ROM que pode ser apagada ou programada através de impulsos elétricos.</p>
+                            <p><strong>EEPROM: </strong> É a ROM que pode ser apagada ou programada através de impulsos elétricos.</p>
                             <br></br>
 
                             <p>Nas próximas lições veremos mais sobre os componentes básicos de um computador.</p>

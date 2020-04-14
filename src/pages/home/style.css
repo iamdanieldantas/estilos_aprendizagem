@@ -37,6 +37,11 @@
   font-size: 16px;
 }
 
+.conteudo-container .container .article-conteudo article li {
+  text-align: justify;
+  font-size: 16px;
+}
+
 .conteudo-container .container img {
   height: 448px;
 }
@@ -47,8 +52,12 @@
 }
 
 .imagem img{
-  max-width:900px;
-  max-height:350px;
-  width: auto;
-  height: auto;
+  width:700px;
+  height:350px;
+  /* width: auto;
+  height: auto; */
+}
+
+.conteudo-container .container .article-conteudo iframe{
+  margin: 20px 0px 20px 0px;
 }
