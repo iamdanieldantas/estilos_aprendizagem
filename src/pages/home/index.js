@@ -79,6 +79,7 @@ export default function Home() {
                     <h1>CONHECIMENTOS BÁSICOS DE COMPUTAÇÃO E MICROINFORMÁTICA
                         <span><VolumeUp onClick={() => play(midia_1)} className='volume' /></span>
                     </h1>
+                    
                 </header>
 
 
@@ -89,6 +90,7 @@ export default function Home() {
 
                     {gabarito[0].exibir ?
                         <article>
+                            <iframe width="700" height="315" src="https://www.youtube.com/embed/iTaAGSMl2zw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                             <p>Este tutorial trará uma série de tópicos sobre noções básicas de informática,
                             bem como uma série de conceitos sobre o mundo tecnológico. Nestas séries serão
@@ -132,7 +134,9 @@ export default function Home() {
                             <p> A figura a seguir demonstra um exemplo simples de um computador e seus equipamentos:</p>
                             <br></br>
 
+                            <div class="imagem">
                             <img src={img1} alt="descrição"></img>
+                            </div>
                             <br></br>
 
                             <p>1 – Gabinete – contendo:</p>
@@ -176,7 +180,9 @@ export default function Home() {
                                 <span><VolumeUp onClick={() => play(midia_3)} className='volume' /></span>
                             </h2>
 
+                            <div class="imagem">
                             <img src={img2} alt="descrição"></img>
+                            </div>
                             <br></br>
                         </article> : <></>}
 
