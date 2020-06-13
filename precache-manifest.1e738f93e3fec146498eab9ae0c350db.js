@@ -1,4 +1,5 @@
-self.__precacheManifest = (self.__precacheManifest || []).concat([
+  // eslint-disable-next-line no-restricted-globals
+  self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "489e5b256fa7bec8ca7d70679da9ddb5",
     "url": "/ddvieira/estilos_aprendizagem.git/index.html"

@@ -1,0 +1,76 @@
+#page-create-point{
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+/* background: #054f77; */
+#page-create-point header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page-create-point p{
+    text-indent: 50px;
+    text-align: justify;
+    word-spacing: 8px;
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+
+
+#form{
+    background-color: #f0f0f5;
+    margin: 80px auto;
+    padding: 64px;
+    border-radius: 8px;
+    max-width: 730px;    
+}
+
+
+#fieldset{
+    margin-top: 64px;
+    border: 0;
+    
+}
+
+
+#field{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    
+}
+
+
+#input{
+    height: 50px;
+    width: 512px;
+    margin-top: 24px;
+    background-color: #ffffff;
+    border: 0;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+
+form button{
+    width: 260px;
+    height: 56px;
+    background-color: #aba2ff;
+    border-radius: 8px;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    margin-top: 40px;
+    transition: background-color 400ms;
+}
+
+form button:hover{
+    background-color: #6765ff;
+}
+
