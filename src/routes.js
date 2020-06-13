@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route} from 'react-router-dom';
 
-import Main from './pages/Quiz';
-import Home from './pages/Home'
+import Main from './pages/quiz';
+import Home from './pages/home'
+import HomePage from './pages/homePage'
 
 const Routes = () => (
     // Dois componentes sejam exibidos quando a rota for acessado
@@ -12,6 +13,7 @@ const Routes = () => (
             {/* exact -> Verifica se a url é exatamente igual ao path */}
             <Route path="/" exact component = {Main}/>
             <Route path="/home" component = {Home}/>
+            <Route path="/homePage" component = {HomePage}/>
         </Switch>
     </BrowserRouter>
 );
