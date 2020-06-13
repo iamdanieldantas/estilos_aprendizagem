@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FontSizeChange from '../../components/FontSizeChange';
 import VolumeUp from '@material-ui/icons/VolumeUp';
+import LikertScale from '../../components/LikertScale'
+import api from '../../services/api';
 
 import './style.css';
 
@@ -17,8 +19,13 @@ import img1 from '../../assets/images/img1.png';
 import img2 from '../../assets/images/img2.png';
 
 export default function Home() {
-    const result_quiz = localStorage.getItem('deficiencia');
-    alert("result: " + result_quiz);
+    // const result_quiz = localStorage.getItem('deficiencia');
+    // const nome = localStorage.getItem('deficiencia');
+    const [deficiencia, setDeficiencia] = useState(localStorage.getItem('deficiencia'));
+    const [nomeUsuario, setNomeUsuario] = useState('');
+    const [nota, setNota] = useState(0);
+    const [avaliar, setAvaliar] = useState(false);
+    // alert("resultado: " + result_quiz);
 
     const play = (midia) => {
         const audio = new Audio(midia);
@@ -27,22 +34,22 @@ export default function Home() {
 
     const gabarito = {
         0: {
-            deficiencia: ['motora', 'visual'],
+            deficiencia: ['motora', 'visual', 'cognitivo'],
             exibir: 0,
             audio: 0
         },
 
         1: {
-            deficiencia: ['motora', 'auditiva', 'cognitiva'],
+            deficiencia: ['motora', 'auditiva'],
             exibir: 0
         },
 
         2: {
-            deficiencia: ['visual', 'motora', 'auditiva'],
+            deficiencia: ['visual', 'motora', 'auditiva', 'cognitivo'],
             exibir: 0
         },
         3: {
-            deficiencia: ['visual', 'motora', 'auditiva'],
+            deficiencia: ['visual', 'motora', 'auditiva', 'cognitivo'],
             exibir: 0
         },
         4: {
@@ -50,7 +57,7 @@ export default function Home() {
             exibir: 0
         },
         5: {
-            deficiencia: ['visual', 'motora', 'auditiva'],
+            deficiencia: ['visual', 'motora', 'auditiva', 'cognitivo'],
             exibir: 0
         },
         6: {
@@ -65,11 +72,43 @@ export default function Home() {
 
     //Atualiza dinamicamente todos as mídias que serão disponibilizadas
     Object.values(gabarito).filter(gabarito => gabarito.deficiencia
-        .includes(result_quiz))
+        .includes(deficiencia))
         .map((gabarito) => (
             gabarito.exibir = 1
         ));
-    console.log(gabarito);
+
+    // useEffect(() => {
+    //     setDeficiencia(result_quiz);
+    //     setNota(5);
+    // }, [result_quiz])
+
+    const saveRating = (nota) => {
+        setNota(nota);
+        setAvaliar(true);
+    }
+
+    const submitRating = () => {
+        if (avaliar) {
+            const rating = {
+                nm_usuario: 'Daniel Dantas',
+                nr_nota: nota,
+                ds_deficiencia: (deficiencia == null ? 'auditiva' : deficiencia)
+            }
+            try {
+                console.log(rating);
+
+                setAvaliar(false);
+                api.post('avaliacao', rating);
+                alert("Avaliação concluída com sucesso!");
+            } catch (error) {
+                alert("Erro ao cadastrar uma avaliação. Tente novamente.");
+            }
+        } else {
+            alert("Preencha a resposta antes de enviar")
+        }
+
+    }
+
 
     return (
         <div className="conteudo-container">
@@ -79,20 +118,23 @@ export default function Home() {
                     <h1>CONHECIMENTOS BÁSICOS DE COMPUTAÇÃO E MICROINFORMÁTICA
                         <span><VolumeUp onClick={() => play(midia_1)} className='volume' /></span>
                     </h1>
-                    
+
                 </header>
 
 
                 <div className="article-conteudo content" >
-                    
+
                     <br></br>
                     <FontSizeChange />
                     <br></br>
 
                     {gabarito[0].exibir ?
                         <article>
-                            
-                            <iframe width="700" height="315" src="https://www.youtube.com/embed/iTaAGSMl2zw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                            <iframe width="700" height="315" src="https://www.youtube.com/embed/iTaAGSMl2zw"
+                                frameborder="0" title="Conhecimento básico de computação e informatica"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
 
                             <p>Este tutorial trará uma série de tópicos sobre noções básicas de informática,
                             bem como uma série de conceitos sobre o mundo tecnológico. Nestas séries serão
@@ -137,7 +179,7 @@ export default function Home() {
                             <br></br>
 
                             <div class="imagem">
-                            <img src={img1} alt="Primeira imgaem, computador"></img>
+                                <img src={img1} alt="Primeira imagem, computador"></img>
                             </div>
                             <br></br>
 
@@ -183,7 +225,7 @@ export default function Home() {
                             </h2>
 
                             <div class="imagem">
-                            <img src={img2} alt="Segunda imagem, diagrama"></img>
+                                <img src={img2} alt="Segunda imagem, diagrama"></img>
                             </div>
                             <br></br>
                         </article> : <></>}
@@ -319,6 +361,15 @@ export default function Home() {
 
                         </article> : <></>}
                 </div>
+
+                <br></br>
+
+                <h1 className="rating-title">Você acha que esse sistema te ajudou a entender melhor o conteúdo?</h1>
+                <br></br>
+                <div className="rating">
+                    <LikertScale saveAnswer={(answer) => saveRating(answer)} />
+                </div>
+                <button className="button" type="submit" onClick={submitRating}> Enviar Resposta</button>
             </div>
         </div>
     )

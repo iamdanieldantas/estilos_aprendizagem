@@ -21,7 +21,7 @@ const Main = () => {
     }
 
     const emptyAnswer = () => {
-        return alert("Há campos vazíos no questionário");
+        return alert("Há algum campo não preenchido no questionário");
     }
 
     const submiteAnswer = () => {

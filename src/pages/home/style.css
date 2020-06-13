@@ -61,3 +61,22 @@
 .conteudo-container .container .article-conteudo iframe{
   margin: 20px 0px 20px 0px;
 }
+
+.conteudo-container .container .rating-title{
+  font-size: 1.5em;
+}
+
+.conteudo-container .container .rating {
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 16px;
+  display: grid;
+  grid-gap: 24px;
+}
+
+.conteudo-container .container  button
+{
+  background-color: #4682b4;
+  margin-bottom: 24px;
+}
