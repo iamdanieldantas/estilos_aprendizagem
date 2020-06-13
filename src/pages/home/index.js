@@ -22,7 +22,7 @@ export default function Home() {
     // const result_quiz = localStorage.getItem('deficiencia');
     // const nome = localStorage.getItem('deficiencia');
     const [deficiencia, setDeficiencia] = useState(localStorage.getItem('deficiencia'));
-    const [nomeUsuario, setNomeUsuario] = useState('');
+    const [nomeUsuario, setNomeUsuario] = useState(localStorage.getItem('name'));
     const [nota, setNota] = useState(0);
     const [avaliar, setAvaliar] = useState(false);
     // alert("resultado: " + result_quiz);
@@ -90,13 +90,12 @@ export default function Home() {
     const submitRating = () => {
         if (avaliar) {
             const rating = {
-                nm_usuario: 'Daniel Dantas',
+                nm_usuario: nomeUsuario,
                 nr_nota: nota,
-                ds_deficiencia: (deficiencia == null ? 'auditiva' : deficiencia)
+                ds_deficiencia: deficiencia
             }
             try {
                 console.log(rating);
-
                 setAvaliar(false);
                 api.post('avaliacao', rating);
                 alert("Avaliação concluída com sucesso!");
@@ -215,7 +214,7 @@ export default function Home() {
                             <br></br>
 
                             <p>ENTRADA => PROCESSAMENTO  => SAÍDA</p>
-                            
+
                             <br></br>
                         </article> : <></>}
 
