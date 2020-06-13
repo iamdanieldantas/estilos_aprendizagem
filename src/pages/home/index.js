@@ -173,6 +173,7 @@ export default function Home() {
                             <br></br>
 
                             <p>ENTRADA => PROCESSAMENTO  => SAÍDA</p>
+                            
                             <br></br>
                         </article> : <></>}
 

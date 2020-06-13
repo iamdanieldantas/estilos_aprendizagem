@@ -9,7 +9,10 @@
 
 body {
     font: 400 14px Roboto, sans-serif;
-    background: #f0f0f5;
+    /* background: #f0f0f5; */
+    
+    /* Pode desabilitar essa cor se quiser, coloquei para o fundo não ficar tão branco e doer a vista */
+    background: #054f77;
 
     /* melhorar font no google chrome */
     -webkit-font-smoothing: antialiased;
