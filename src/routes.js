@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route} from 'react-router-dom';
 
-import Main from './pages/Quiz';
-import Home from './pages/Home'
+import Main from './pages/quiz';
+import Home from './pages/home'
 import HomePage from './pages/homePage'
 
 const Routes = () => (

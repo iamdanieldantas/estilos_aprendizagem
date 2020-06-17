@@ -25,17 +25,15 @@ const Main = () => {
     }
 
     const submiteAnswer = () => {
-        let visual = answers[0] + answers[4] + answers[8] + answers[12];
-        let auditivo = answers[1] + answers[5] + answers[9] + answers[13];
-        let motor = answers[2] + answers[6] + answers[10] + answers[14];
-        let cogn = answers[3] + answers[7] + answers[11] + answers[15];
+        let visual = answers[0] + answers[3] + answers[6] + answers[9];
+        let auditivo = answers[1] + answers[4] + answers[7] + answers[10];
+        let cogn = answers[2] + answers[5] + answers[8] + answers[11];
+        // let cogn = answers[3] + answers[7] + answers[11] + answers[15];
 
-        if (visual > auditivo && visual > motor && visual > cogn) {
+        if (visual >= auditivo && visual >= cogn) {
             localStorage.setItem('deficiencia', 'visual');
-        } else if (auditivo > motor && auditivo > cogn) {
+        } else if (auditivo >= cogn) {
             localStorage.setItem('deficiencia', 'auditivo');
-        } else if (motor > cogn) {
-            localStorage.setItem('deficiencia', 'motora');
         } else {
             localStorage.setItem('deficiencia', 'cognitivo');
         }
